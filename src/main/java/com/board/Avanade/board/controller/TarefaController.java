@@ -5,8 +5,11 @@ import java.util.Scanner;
 
 import com.board.Avanade.board.model.Tarefa;
 import com.board.Avanade.board.service.TarefaService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class TarefaController {
+
     private TarefaService service = new TarefaService();
     private Scanner scanner = new Scanner(System.in);
 
