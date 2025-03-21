@@ -22,7 +22,6 @@ public class TarefaRepository {
             stmt.setDate(4, Date.valueOf(tarefa.getDataCriacao()));
             stmt.executeUpdate();
 
-            // Recupera o ID gerado
             try (ResultSet rs = stmt.getGeneratedKeys()) {
                 if (rs.next()) {
                     tarefa.setId((long) rs.getInt(1));
@@ -33,7 +32,6 @@ public class TarefaRepository {
         }
     }
 
-    // Retorna todas as tarefas
     public List<Tarefa> listarTarefas() {
         List<Tarefa> tarefas = new ArrayList<>();
         String sql = "SELECT * FROM tarefas";
@@ -58,7 +56,6 @@ public class TarefaRepository {
         return tarefas;
     }
 
-    // Atualiza o status de uma tarefa
     public void atualizarStatus(int id, String novoStatus) {
         String sql = "UPDATE tarefas SET status = ? WHERE id = ?";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -71,7 +68,6 @@ public class TarefaRepository {
         }
     }
 
-    // Remove uma tarefa
     public void removerTarefa(int id) {
         String sql = "DELETE FROM tarefas WHERE id = ?";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);

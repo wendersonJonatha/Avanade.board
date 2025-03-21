@@ -18,10 +18,8 @@ public class Tarefa {
     private String status;
     private LocalDate dataCriacao;
 
-    // Construtor padrão (obrigatório para JPA)
     public Tarefa() {}
 
-    // Construtor com parâmetros
     public Tarefa(String titulo, String descricao, String status) {
         this.titulo = titulo;
         this.descricao = descricao;
@@ -29,7 +27,6 @@ public class Tarefa {
         this.dataCriacao = LocalDate.now();
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
