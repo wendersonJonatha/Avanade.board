@@ -1,4 +1,4 @@
-# Avanade.board
+# Board de Tarefas
 
 ## 📌 Descrição
 Este projeto consiste na criação de um **board de tarefas** utilizando **Java**, abordando todas as etapas do desenvolvimento, desde o planejamento e estruturação até a implementação de funcionalidades essenciais. O objetivo é consolidar conhecimentos sobre desenvolvimento de software, seguindo boas práticas e padrões de arquitetura.
